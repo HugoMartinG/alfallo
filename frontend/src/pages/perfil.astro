@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Perfil · AlFallo">
+  <header class="mb-8">
+    <p class="text-xs text-suave">Mi espacio / Perfil</p>
+    <h1 class="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl">Tu perfil</h1>
+  </header>
+
+  <section class="flex items-center gap-4 rounded-2xl border border-borde bg-superficie p-5">
+    <div class="grid h-16 w-16 place-items-center rounded-full bg-acento/10 text-lg font-bold text-acento">IK</div>
+    <div>
+      <p class="text-lg font-bold">Iker Martín</p>
+      <p class="text-sm text-suave">Nivel intermedio · Hipertrofia</p>
+    </div>
+  </section>
+
+  <div class="mt-4 grid gap-4 sm:grid-cols-3">
+    <div class="rounded-2xl border border-borde bg-superficie p-5">
+      <p class="text-xs text-suave">Peso corporal</p>
+      <p class="mt-2 text-xl font-bold">78 kg</p>
+    </div>
+    <div class="rounded-2xl border border-borde bg-superficie p-5">
+      <p class="text-xs text-suave">Altura</p>
+      <p class="mt-2 text-xl font-bold">178 cm</p>
+    </div>
+    <div class="rounded-2xl border border-borde bg-superficie p-5">
+      <p class="text-xs text-suave">Entrenamientos</p>
+      <p class="mt-2 text-xl font-bold text-acento">10</p>
+    </div>
+  </div>
+</Layout>

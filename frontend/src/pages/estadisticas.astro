@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const metricas = [
+  { label: "Tonelaje semanal", valor: "24.860 kg" },
+  { label: "Sesiones este mes", valor: "14" },
+  { label: "1RM estimado · Banca", valor: "102 kg" },
+];
+
+const semanas = [
+  { s: "S1", v: 52 },
+  { s: "S2", v: 61 },
+  { s: "S3", v: 58 },
+  { s: "S4", v: 72 },
+  { s: "S5", v: 80 },
+  { s: "S6", v: 100 },
+];
+---
+
+<Layout title="Estadísticas · AlFallo">
+  <header class="mb-8">
+    <p class="text-xs text-suave">Mi espacio / Estadísticas</p>
+    <h1 class="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl">Tu progreso, en números.</h1>
+    <p class="mt-1 text-sm text-suave">Lo que no se mide, no mejora.</p>
+  </header>
+
+  <div class="grid gap-4 sm:grid-cols-3">
+    {
+      metricas.map((m) => (
+        <div class="rounded-2xl border border-borde bg-superficie p-5">
+          <p class="text-xs text-suave">{m.label}</p>
+          <p class="mt-2 text-2xl font-extrabold text-acento">{m.valor}</p>
+        </div>
+      ))
+    }
+  </div>
+
+  <section class="mt-6 rounded-2xl border border-borde bg-superficie p-5">
+    <h2 class="font-bold">Evolución del tonelaje</h2>
+    <p class="text-xs text-suave">Gráfico provisional. Se sustituirá por un componente React con datos reales.</p>
+    <div class="mt-6 flex h-48 items-end gap-3">
+      {
+        semanas.map((x) => (
+          <div class="flex flex-1 flex-col items-center gap-2">
+            <div class="w-full rounded-t-md bg-primario" style={`height: ${x.v}%`} />
+            <span class="text-[11px] text-suave">{x.s}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import RutinasApp from "../components/RutinasApp.jsx";
+---
+
+<Layout title="Rutinas · AlFallo">
+  <header class="mb-8">
+    <p class="text-xs text-suave">Mi espacio / Rutinas</p>
+    <h1 class="mt-2 text-3xl font-extrabold tracking-tight md:text-4xl">
+      Tus rutinas. Tu siguiente nivel.
+    </h1>
+    <p class="mt-1 text-sm text-suave">Menos improvisar. Más progresar.</p>
+  </header>
+
+  <section class="rounded-2xl border border-primario/30 bg-gradient-to-br from-primario/15 to-superficie p-6">
+    <p class="text-[10px] font-bold uppercase tracking-widest text-primario">
+      Tu plan actual · Fuerza e hipertrofia
+    </p>
+    <h2 class="mt-2 text-3xl font-extrabold">Torso / Pierna</h2>
+    <p class="mt-1 text-sm text-suave">4 días por semana · Nivel intermedio · 55–65 min por sesión</p>
+  </section>
+
+  <RutinasApp client:load />
+</Layout>
